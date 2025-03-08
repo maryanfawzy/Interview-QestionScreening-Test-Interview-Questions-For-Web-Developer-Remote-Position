@@ -1,0 +1,628 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Q&A Layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    display: none; /* Hide initially */
+}
+
+/* Sidebar for Questions */
+.sidebar {
+    width: 30%;
+    background: #ff6f61;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+/* Question Box */
+.question {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.question:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Answer Container - Hidden Initially */
+.answer-container {
+    margin-left: 32%;
+    width: 68%;
+    display: none; /* Hidden initially */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Answer Box */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    min-height: 100px;
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Class for Sliding In */
+.answer-container.active {
+    display: flex;
+    transform: translateX(0); /* Slide into place */
+}
+
+/* Answer Text Animation */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Intro Section (With Drop & Zoom Animation) */
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    text-align: center;
+    width: 100%;
+    animation: dropInZoom 1.2s ease-in-out;
+    overflow: hidden;
+}
+
+/* Drop-In & Zoom Effect */
+@keyframes dropInZoom {
+    from {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade-Up Text Animation */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Elements with Fade-Up */
+.animated-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fade-up 1s ease-in-out forwards;
+}
+
+/* Delay for the subtitle */
+#subText {
+    animation-delay: 0.5s;
+    font-size: 25px;
+}
+
+/* Waving Hand Animation */
+.waving-hand {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+}
+
+/* Hand Wave Effect */
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(20deg); }
+}
+
+/* Start Button */
+#startBtn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fade-up 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+/* Q&A Layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    display: none; /* Hide initially */
+}
+
+/* Sidebar for Questions */
+.sidebar {
+    width: 30%;
+    background: #ff6f61;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+/* Question Box */
+.question {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.question:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Answer Box */
+.answer-container {
+    margin-left: 32%;
+    width: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* Answer Box (Fully Visible) */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    min-height: 100px;
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Answer Text Animation */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.answer-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* Ensure all questions have equal height */
+.question {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px; /* Ensures uniform height */
+    box-sizing: border-box; /* Prevents padding issues */
+}
+
+/* Prevent the first question from being larger */
+.question:first-child {
+    margin-top: 10px;
+}
+
+/* Hover Effect */
+.question:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+/* Answer Box - Ensure Proper Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;  /* Keep text centered */
+    padding: 20px;
+    min-height: 140px; /* Increase height slightly */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 43%; /* Moves the entire box slightly higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox to Keep "The answer" at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keep centered */
+    justify-content: flex-start; /* Ensure text starts from the top */
+}
+
+/* Ensure "The answer" is positioned HIGHER */
+.answer-title {
+    font-size: 1.2rem; /* Make it slightly larger */
+    color: #ff6f61; /* Make it pop */
+    position: relative;
+    top: -10px; /* Move it up */
+    margin-bottom: 5px; /* Reduce space below */
+}
+
+
+
+
+/* Answer Box - Ensure Proper Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: left;  /* Align text left for readability */
+    padding: 20px;
+    min-height: 140px; /* Increase height slightly */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 43%; /* Moves the entire box slightly higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox to Keep "The answer" at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to left */
+    justify-content: flex-start; /* Ensure text starts from the top */
+}
+
+/* Ensure "The answer" is positioned HIGHER */
+.answer-title {
+    font-size: 1.2rem; /* Make it slightly larger */
+    color: #ff6f61; /* Make it pop */
+    position: relative;
+    top: -10px; /* Move it up */
+    margin-bottom: 5px; /* Reduce space below */
+}
+
+/* Style for the actual answer text */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+    text-align: left;  /* Keep text readable */
+    width: 100%;  /* Make sure it spans the width of the box */
+    margin-top: 0px; /* Ensures words start at the top */
+    white-space: pre-line; /* Ensures line breaks are applied */
+}
+
+
+
+
+
+/* Ensure "The answer" is centered properly */
+.answer-title {
+    font-size: 1.2rem; /* Make it slightly larger */
+    color: #ff6f61; /* Make it stand out */
+    text-align: center; /* Center it */
+    display: block; /* Ensure it takes the full width */
+    margin-bottom: 10px; /* Space between "The answer" and actual answer */
+}
+
+
+
+
+
+/* Answer Box - Ensure Proper Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;  /* Keep text centered */
+    padding: 20px;
+    min-height: 160px; /* Increase height slightly */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%; /* Moves the entire box to the center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* NEW: Flexbox to position content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Ensure "The answer" is positioned HIGHER */
+.answer-title {
+    font-size: 1.2rem; /* Make it slightly larger */
+    color: #ff6f61; /* Make it pop */
+    padding-top: 20px;
+}
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;  /* Keep text centered */
+    padding: 20px;
+    min-height: 160px; /* Increase height slightly */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%; /* Moves the entire box to the center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* NEW: Flexbox to position content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+/* Style for the actual answer text */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+    text-align: center; /* Keep text centered */
+    width: 100%; /* Ensure full width */
+    max-width: 90%; /* Keep the text in a nice readable area */
+
+    
+}
+
+
+
+
+/* Answer Box - Perfect Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    min-height: 160px; /* Ensures enough space */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox to align content perfectly */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the answer exactly in the middle */
+    gap: 15px; /* Adds space between "The answer" and actual answer */
+}
+
+/* Center "The answer" at the top */
+.answer-title {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px; /* Moves it slightly higher */
+}
+
+/* Perfectly center the actual answer */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    position: relative;
+    top: 0; /* Reset positioning */
+    transform: none; /* Reset transformation */
+    display: flex;justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+ 
+
+
+/* Answer Box - Ensure Proper Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    min-height: 160px; /* Ensures enough space */
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* ✅ Use Flexbox to perfectly center everything */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures "The answer" stays at the top */
+}
+
+/* Keep "The answer" at the top */
+.answer-title {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    text-align: center;
+    width: 100%;
+}
+
+/* ✅ Perfectly center the actual answer */
+#answer-text {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    flex-grow: 1; /* Allows the text to take equal space */
+    display: flex;
+    align-items: center; /* ✅ Centers text vertically */
+    justify-content: center; /* ✅ Centers text horizontally */
+}
+
+
+
+
+/* Answer Box - Ensures Proper Layout */
+.answer-box {
+    width: 70%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    min-height: 160px;
+    border-top: 3px solid #ff6f61;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* ✅ Use Flexbox to center everything */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures the answer is centered */
+}
+
+/* Style "The Answer" Title */
+.title-container {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* ✅ Style for the Actual Answer */
+.text-container {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom:30px;
+}
+
+
+/* Ensure text stays on one line */
+.text-container {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    white-space: nowrap; /* ✅ Prevents text from breaking */
+    overflow: hidden; /* ✅ Ensures it stays inside the box */
+    text-overflow: ellipsis; /* ✅ Prevents overflow issues */
+    width: auto; /* ✅ Adjusts width dynamically */
+    max-width: 90%; /* ✅ Prevents unnecessary wrapping */
+}
+
+
+
+.text-container {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    white-space: nowrap; /* ✅ Prevents text from breaking */
+    overflow: hidden; /* ✅ Ensures text does not overflow */
+    text-overflow: ellipsis; /* ✅ Handles long text gracefully */
+    width: auto; /* ✅ Adjust width dynamically */
+    max-width: 100%; /* ✅ Ensures it doesn’t wrap unnecessarily */
+    display: inline-block; /* ✅ Prevents it from taking full width */
+}
