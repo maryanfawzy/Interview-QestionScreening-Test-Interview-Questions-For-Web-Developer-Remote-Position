@@ -217,12 +217,61 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 
+// function toggleAnswer(element, direction) {
+//     let answerContainer = document.querySelector(".answer-container");
+//     let answerText = document.getElementById("answer-text");
+//     let text = element.querySelector(".answer").getAttribute("data-text");
+
+//     // Show and slide in the answer container
+//     answerContainer.style.display = "flex"; 
+//     setTimeout(() => {
+//         answerContainer.classList.add("active"); 
+//     }, 50);
+
+//     // ✅ Reset answer text
+//     answerText.innerHTML = "";
+//     answerText.style.opacity = "0";
+
+//     // ✅ Extract the actual answer text (without "The answer")
+//     let remainingText = text.replace("The answer", ""); 
+
+//     // ✅ Convert line breaks (\n) to <br> for proper formatting
+//     let formattedText = remainingText.replace(/(?:\r\n|\r|\n)/g, "<br>");
+
+//     // ✅ Show the actual answer word by word
+//     let words = formattedText.split(" ");
+//     let i = 0;
+//     let speed = words.length > 20 ? 20 : 50; 
+
+//     function addWord() {
+//         if (i < words.length) {
+//             answerText.innerHTML += words[i] + " ";
+//             i++;
+//             setTimeout(addWord, speed);
+//         }
+//     }
+
+//     setTimeout(() => {
+//         answerText.style.opacity = "1"; 
+//         addWord();
+//     }, 300); 
+// }
+
+
 function toggleAnswer(element, direction) {
     let answerContainer = document.querySelector(".answer-container");
     let answerText = document.getElementById("answer-text");
+
+    // Get the question number from the h3 inside the clicked question div
+    let questionNumber = element.querySelector("h3").innerText.match(/^\d+/);
+    
+    // Get the actual answer from the data attribute
     let text = element.querySelector(".answer").getAttribute("data-text");
 
-    // Show and slide in the answer container
+    // Ensure there is a number
+    let formattedQuestionNumber = questionNumber ? `<span class="question-number">Q${questionNumber}:</span> ` : "";
+
+    // ✅ Show and slide in the answer container (animation stays the same)
     answerContainer.style.display = "flex"; 
     setTimeout(() => {
         answerContainer.classList.add("active"); 
@@ -230,18 +279,17 @@ function toggleAnswer(element, direction) {
 
     // ✅ Reset answer text
     answerText.innerHTML = "";
-    answerText.style.opacity = "0";
+    answerText.style.opacity = "1"; // Make visible immediately
 
-    // ✅ Extract the actual answer text (without "The answer")
-    let remainingText = text.replace("The answer", ""); 
+    // ✅ Convert new lines (\n) to <br> for proper formatting
+    let formattedText = text.replace(/(?:\r\n|\r|\n)/g, "<br>");
 
-    // ✅ Convert line breaks (\n) to <br> for proper formatting
-    let formattedText = remainingText.replace(/(?:\r\n|\r|\n)/g, "<br>");
+    // ✅ Set "The answer" and include the question number before the answer
+    answerText.innerHTML = formattedQuestionNumber; 
 
-    // ✅ Show the actual answer word by word
     let words = formattedText.split(" ");
     let i = 0;
-    let speed = words.length > 20 ? 20 : 50; 
+    let speed = words.length > 20 ? 20 : 50; // Control speed for long answers
 
     function addWord() {
         if (i < words.length) {
@@ -251,8 +299,17 @@ function toggleAnswer(element, direction) {
         }
     }
 
-    setTimeout(() => {
-        answerText.style.opacity = "1"; 
-        addWord();
-    }, 300); 
+    setTimeout(addWord, 300); // Add a small delay before animating the text
+}
+
+
+
+
+
+
+
+
+function showThankYou() {
+    let thankYouText = document.getElementById("thank-you-text");
+    thankYouText.innerText = "Thank you! 😊";
 }

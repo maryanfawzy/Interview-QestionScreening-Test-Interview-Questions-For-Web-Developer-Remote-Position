@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maryan's Interactive Q&A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ireal&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+
 </head>
 <body>
 
@@ -14,6 +17,8 @@
         <h1 class="animated-text">Hey, I'm Maryan! <span class="waving-hand">👋</span></h1>
         <p class="animated-text" id="subText">Let's make this fun! Click 'Start' to see my answers with cool animations.</p>
         <button id="startBtn">Start</button>
+        <img id="mario" src="./Assets/mario.png" alt="Mario Walking">
+
     </div>
 
     <!-- Q&A Layout -->
@@ -25,26 +30,35 @@
             <div class="question left" onclick="toggleAnswer(this, 'left')">
                 <h3>1. Are you currently employed?</h3>
         
-                <p class="answer answer-1"  data-text=" The answer 
+                <p class="answer answer-1"  data-text="
                 Yes, I am working as a Frontend Engineer at Skinstric AI company."></p>
             </div>
 
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>2. Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can adocate 30 to 40 hours weekly."></p>
+                <p class="answer" data-text="
+                Yes, I can devote 30 to 40 hours weekly."></p>
 
             </div>
 
             <div class="question right" onclick="toggleAnswer(this, 'right')">
                 <h3>3. Explain the role of JavaScript in web development?</h3>
-                <p class="answer" data-text="JJavaScript is playing a very major role in web development such as:
-                1- For the user side: It allows the user to interact with the web page.
-                2- Handling Events: JS allows the user to interact with web pages like clicking buttons, filling form inputs, or submitting forms.
-                3- JS Libraries: With JS frontend libraries like React.js and Vue.js, it makes it very easy to build a very good web application with a very good user interface.
-                4- It can work with any browser.
-                5- We can work with the backend using only one language, ‘JS,’ because of Node.js technology.
-                6- Asynchronous Operation: We can fetch any API data from servers very easily and fast.
-                7- DOM Manipulation: It allows modifications to update the content, style, and so on without requiring a full-page reload.
+                <p class="answer" data-text="
+                JavaScript is playing a very major role in web development such as:
+
+                1. For the user side: It allows the user to interact with the web page.
+
+                2. Handling Events: JS allows the user to interact with web pages like clicking buttons, filling form inputs, or submitting forms.
+
+                3. JS Libraries: With JS frontend libraries like React.js and Vue.js, it makes it very easy to build a very good web application with a very good user interface.
+
+                4. It can work with any browser.
+
+                5. We can work with the backend using only one language: JS, because of Node.js technology.
+
+                6. Asynchronous Operation: We can fetch any API data from servers very easily and fast.
+
+                7. DOM Manipulation: It allows modifications to update the content, style, and so on without requiring a full-page reload.
                 ">
                 </p>
             </div>
@@ -52,240 +66,289 @@
 
             <div class="question right" onclick="toggleAnswer(this, 'right')">
                 <h3>4. What does the term web hosting mean in web development?</h3>
-                <p class="answer" data-text="JavaScript enables interactivity, DOM manipulation, event handling, async operations, and frameworks like React."></p>
+                <p class="answer" data-text="
+                • In web development, web hosting refers to the process of storing and serving website files, making the website accessible on the internet.
+
+                • There are various ways to deploy a site, such as using a domain name, server, or storage.
+
+                • Examples: Vercel, Netlify, and GitHub.
+                "></p>
             </div>
 
             <div class="question right" onclick="toggleAnswer(this, 'right')">
                 <h3>5. Explain the concept of “browser compatibility.”</h3>
-                <p class="answer" data-text="1.JavaScript enables interactivity, DOM manipulation, event handling, async operations, and frameworks like React.
-
-                2.JavaScript enables interactivity, DOM manipulation, event handling, async operations, and frameworks like React.
-
-               3. JavaScript enables interactivity, DOM manipulation, event handling, async operations, and frameworks like React.
-
-                JavaScript enables interactivity, DOM manipulation, event handling, async operations, and frameworks like React."></p>
+                <p class="answer" data-text="
+                Browser Compatibility ensures that a website functions and appears correctly across different web browsers
+                 (Chrome, Firefox, Safari, etc.)."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>6. What is an API, and what role does it play in web development?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                • API stands for Application Programming Interface. 
+
+                • It allows a website to fetch and send data from a database or another website."></p>
             </div>
 
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>7. What is HTML, and why is it important in web development?</h3>
-                <p class="answer" data-text="HTML stands for Hyper Text Markup Language, it is the most essential for web development. 
-                It is used to create web pages and define the structure blocks. 
-                It contains a lot of elements and tags such as headings, paragraphs, links, images, forms, and more.
+                <p class="answer" data-text="
+                • HTML stands for HyperText Markup Language.
+
+                • It is essential for web development as it is used to create web pages and define their structure. HTML includes various elements and tags such as headings, paragraphs, links, images, forms, and more.
 
                 Why is it important?
-                
-                It works with all web browsers all over the world.
-                It is essential for web development, the basic starting point for web applications.
-                It works with CSS and JS: HTML (content), CSS (style), JS (functionality).
-                Semantic meaning: So we can organize elements properly, for example, using header, footer, or grouping unrelated elements inside a div."></p>
+
+                1.	It works with all web browsers worldwide.
+
+                2.	It is the foundation of web applications. 
+
+                3.	It works alongside CSS and JavaScript: 
+
+                •	HTML: Defines the content.
+                •	CSS: Provides the styling.
+                •	JavaScript: Adds functionality.
+
+                4. Semantic Meaning: Allows structuring elements properly, such as using header, footer, and section.
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>8.  What is CSS, and how does it contribute to web development?</h3>
-                <p class="answer" data-text="CSS stands for Cascading Style Sheets, it is a styling language responsible for the style and decoration of web applications. For example, we can control colors, fonts, animations, and responsive layouts.
+                <p class="answer" data-text="
+                CSS stands for Cascading Style Sheets, it is a styling language responsible for the style and decoration of web applications. For example, we can control colors, fonts, animations, and responsive layouts.
 
                 How does it contribute?
                 
-                Responsive Design: CSS media queries allow web pages to adapt to different screen sizes.
-                Manages styling of the web page.
-                Animations: CSS allows us to add cool animation effects to websites.
-                We can use external stylesheets to ensure consistency."></p>
+                • Responsive Design: CSS media queries allow web pages to adapt to different screen sizes.
+
+                • Manages styling of the web page.
+
+                • Animations: CSS allows us to add cool animation effects to websites.
+
+                • We can use external stylesheets to ensure consistency."></p>
             </div>
 
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>9. What is AJAX, and how does it work?</h3>
-                <p class="answer" data-text="AJAX stands for Asynchronous JavaScript and XML, which is a technique used to send and receive data from the server without reloading the entire web page, making web applications interactive, faster, and dynamic.
+                <p class="answer" data-text="
+                AJAX stands for Asynchronous JavaScript and XML, which is a technique used to send and receive data from the server without reloading the entire web page, making web applications interactive, faster, and dynamic.
 
                 How does it work?
                 
-                User Action: A user performs an action, such as clicking a button.
-                Send the Request: Once clicked, JS uses the XMLHttpRequest object or Fetch API to send an asynchronous request to the server.
-                Processing: The server retrieves the requested data.
-                Response: The server responds with JSON, XML, or HTML data.
-                The web page updates dynamically: JS processes the response and updates the webpage without reloading."></p>
+                • User Action: A user performs an action, such as clicking a button.
+
+                • Send the Request: Once clicked, JS uses the XMLHttpRequest object or Fetch API to send an asynchronous request to the server.
+
+                • Processing: The server retrieves the requested data.
+
+                • Response: The server responds with JSON, XML, or HTML data.
+
+                • The web page updates dynamically: JS processes the response and updates the webpage without reloading."></p>
             </div>
            
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>10. What is the difference between inline and block-level elements in HTML?
 
                 </h3>
-                <p class="answer" data-text="Inline: It starts on the same line and cannot have width and height set, like <span>. It only takes up as much space as its content.
-                    Block: It starts on a new line by default and takes up the entire width of the parent container, like <p>."></p>
+                <p class="answer" data-text="
+                • Inline: It starts on the same line and cannot have width and height set, like 'span'. It only takes up as much space as its content.
+
+                • Block: It starts on a new line by default and takes up the entire width of the parent container, like 'p'."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>11. What is a callback function in JavaScript?</h3>
-                <p class="answer" data-text="A callback is usually used for asynchronous operations, such as handling API requests or event listeners.
+                <p class="answer" data-text="
+                • A callback is usually used for asynchronous operations, such as handling API requests or event listeners.
 
-                It is usually a function that is passed as an argument to another function to execute later after the completion of an operation."></p>
+                •  It is usually a function that is passed as an argument to another function to execute later after the completion of an operation."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>12. Explain the difference between session storage and local storage?</h3>
-                <p class="answer" data-text="Both are part of the Web Storage API and are used to store data in the user's browser.
+                <p class="answer" data-text="
+                • Both are part of the Web Storage API and are used to store data in the user's browser.
 
-                Local Storage:
+                - Local Storage:
                 
-                Permanently stores the data until it is removed by the user or JS.
-                Data is stored even after reloading or closing and reopening the browser.
-                Stores up to 5 MB of data and must be in the same domain.
-                Session Storage:
+               1.  Permanently stores the data until it is removed by the user or JS.
+               2.  Data is stored even after reloading or closing and reopening the browser.
+               3. Stores up to 5 MB of data and must be in the same domain.
+
+                - Session Storage:
                 
-                Stores data temporarily for a single browser session.
-                Data is deleted once the browser is closed.
-                Only accessible within the same tab."></p>
+               1. Stores data temporarily for a single browser session.
+               2. Data is deleted once the browser is closed.
+               3. Only accessible within the same tab."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>13. What does DOM stand for, and what does it do?</h3>
-                <p class="answer" data-text="DOM (Document Object Model) is a programming interface that represents the structure of an HTML document.
-                It allows JS to dynamically interact with and manipulate web pages.
+                <p class="answer" data-text="
+                DOM (Document Object Model) is a programming interface that represents the structure of an HTML document.
+                • It allows JS to dynamically interact with and manipulate web pages.
                 
                 What does it do?
                 
-                Access Elements: Select HTML elements using JS.
-                Modify Content: Change text, images, or HTML dynamically.
-                Handle Events: Respond to user actions.
-                Changing Styles: Apply CSS styles dynamically.
-                Create or Remove Elements: Add or remove elements dynamically."></p>
+                • Access Elements: Select HTML elements using JS.
+
+                • Modify Content: Change text, images, or HTML dynamically.
+
+                • Handle Events: Respond to user actions.
+
+                • Changing Styles: Apply CSS styles dynamically.
+
+                • Create or Remove Elements: Add or remove elements dynamically."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>14. What is a responsive website, and why is it essential?</h3>
-                <p class="answer" data-text="A responsive website adjusts itself automatically to fit different screen sizes.
+                <p class="answer" data-text="
+                A responsive website adjusts itself automatically to fit different screen sizes.
 
                 Why is it essential?
                 
-                Better User Experience: Ensures a smooth experience on all devices.
-                Cheaper: A single website that works on all devices eliminates the need for multiple versions.
-                Faster Loading: Optimized performance improves speed.
-                Very good for mobile devices: Since most users access websites through their phones, responsiveness ensures a smooth experience on smartphones."></p>
+                • Better User Experience: Ensures a smooth experience on all devices.
+
+                • Cheaper: A single website that works on all devices eliminates the need for multiple versions.
+
+                • Faster Loading: Optimized performance improves speed.
+
+                • Very good for mobile devices: Since most users access websites through their phones, responsiveness ensures a smooth experience on smartphones."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>15. How can you view the source code of a webpage in a browser?</h3>
-                <p class="answer" data-text="1- Right-click on the web page, then click View Page Source.
-                2- Ctrl + U (Windows) or Cmd + Option + U (Mac).
-                3- Inspect elements: Ctrl + Shift + I (Windows) or Cmd + Option + I (Mac).
-                4- Right-click → Inspect → Developer Tools.
-                5- View JS files and network requests: Dev Tools → Navigate to Sources → JS, CSS.
-                6- Monitor API requests in the Network tab."></p>
+                <p class="answer" data-text="
+                1. Right-click on the web page, then click View Page Source.
+
+                2. Ctrl + U (Windows) or Cmd + Option + U (Mac).
+
+                3. Inspect elements: Ctrl + Shift + I (Windows) or Cmd + Option + I (Mac).
+
+                4. Right-click → Inspect → Developer Tools.
+
+                5. View JS files and network requests: Dev Tools → Navigate to Sources → JS, CSS.
+
+                6. Monitor API requests in the Network tab."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>16. What is a tag in HTML, and how is it used?</h3>
-                <p class="answer" data-text="An HTML tag is a piece of code enclosed in angle brackets < >.
+                <p class="answer" data-text="
+                An HTML tag is a piece of code enclosed in angle brackets < >.
                     We use it to create elements.
                     
                     It can be:
                     
-                    Open Tag: 'p'
-                    Closing Tag: '/p'
-                    Self-closing Tag: 'img /''
+                    • Open Tag: 'p'
+                    • Closing Tag: '/p'
+                    • Self-closing Tag: 'img /''
                     "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>17.  Describe the differences between responsive and adaptive web design</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                • Responsive Design: Uses flexible grids and CSS media queries to adjust the website layout dynamically for all screen sizes.
+
+                •	Adaptive Design: Uses predefined fixed layouts that change at specific breakpoints based on the device type (e.g., laptop, tablet).
+                 "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>18.  What is a web browser, and how does it work?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                A web browser is a software application used to access websites (e.g., Chrome, Firefox, Edge).
+
+                How it works:
+
+                1.	The user enters a URL.
+
+                2.	The browser sends a request to the web server.
+
+                3.	The server responds with the requested files.
+
+                4.	The browser processes and renders the webpage.
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>19. • What does WYSIWYG stand for, and how is it used in web development?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <h3>19. What does WYSIWYG stand for, and how is it used in web development?</h3>
+                <p class="answer" data-text="
+                WYSIWYG stands for What You See Is What You Get.
+
+                It refers to editors that allow users to create and edit websites visually, displaying the final design exactly as it will appear on the web.
+
+                Examples: WordPress, Wix.
+
+                How it is used: It is an editor that allows developers or non-developers to create or edit a website without needing to write code.
+
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>20.  Explain the concept of “cache” in web browsers.</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <h3>20. Explain the concept of “cache” in web browsers.</h3>
+                <p class="answer" data-text="
+                Cache is a storage mechanism that saves website data locally on a user’s device to improve loading speed and performance.
+
+                How it works:
+
+                1.	When a user visits a website, the browser stores some data in the cache.
+
+                2.	On future visits, the browser loads cached files instead of downloading them again.
+
+                3.	If the website updates, the cache may be cleared to fetch the latest version.
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>21.  What is a web server in the context of web development?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <h3>21. What is a web server in the context of web development?</h3>
+                <p class="answer" data-text="
+                 A web server is a computer or software that stores and processes web pages, delivering them to users over the internet.
+
+                Examples: Node.js, Express.js.
+
+                How it works:
+
+                1.	The user enters a URL in the browser.
+
+                2.	The browser sends a request to the web server.
+
+                3.	The server processes the request and sends back the requested web page.
+
+                4.	The browser renders and displays the page.
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>22.  What is a content management system (CMS), and why might you use one in web development?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                A CMS (Content Management System) is software that allows users to create, manage, and modify websites without writing code.
+
+                Examples: WordPress, Wix.
+
+                Why use a CMS?
+
+                •	Faster Development: Reduces the time required to build a website.
+
+                •	Easy to Use: No coding skills are necessary.
+
+                •	Collaboration: Multiple users can edit and manage content.
+
+                •	Security: Provides built-in protection and updates.
+                "></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>23.  How much do you require per hour if you are hired?
                 </h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                Based on my experience and the responsibilities outlined for this role, my expected hourly rate is $37 - $45 per hour.
+
+                 However, I am open to discussing compensation based on the scope of work and expectations."></p>
             </div>
             <div class="question top" onclick="toggleAnswer(this, 'top')">
                 <h3>24. When can you start working for the company? if Employed</h3>
-                <p class="answer" data-text="Yes, I can."></p>
+                <p class="answer" data-text="
+                I am currently employed, and my company requires a one-week notice. I can start one week after accepting the offer."></p>
             </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
-            <div class="question top" onclick="toggleAnswer(this, 'top')">
-                <h3>Can you devote 30 to 40 hours weekly?</h3>
-                <p class="answer" data-text="Yes, I can."></p>
-            </div>
+            
+            <!-- Thank You Section -->
+<div class="thank-you-container" onclick="showThankYou()">
+    <p id="thank-you-text">Thank You 😊</p>
+</div>
+
+           
+            <div class="border"> </div>
+           
+        
         </div>
         <div>
             Answers

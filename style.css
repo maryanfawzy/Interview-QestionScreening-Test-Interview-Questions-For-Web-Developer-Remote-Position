@@ -1,12 +1,16 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    
     background: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
 }
+body {
+    font-family: 'Ireal', sans-serif;
+}
+
 
 /* Q&A Layout */
 .container {
@@ -19,7 +23,7 @@ body {
 /* Sidebar for Questions */
 .sidebar {
     width: 30%;
-    background: #ff6f61;
+    background: #b4a9a8;
     color: white;
     padding: 20px;
     overflow-y: auto;
@@ -107,7 +111,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: #7b7272;
     color: white;
     text-align: center;
     width: 100%;
@@ -169,7 +173,9 @@ body {
 /* Start Button */
 #startBtn {
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
     background: white;
     border: none;
     border-radius: 5px;
@@ -177,8 +183,16 @@ body {
     transition: 0.3s;
     margin-top: 20px;
     opacity: 0;
+    padding:10px 40px;
+    background: linear-gradient(10deg, #534547, Red);
     animation: fade-up 1s ease-in-out forwards;
     animation-delay: 1s;
+}
+#startBtn:hover{
+    background-color: blue;
+    transform: scale(1.5);
+    border-radius: 50%;
+    
 }
 
 /* Q&A Layout */
@@ -192,7 +206,7 @@ body {
 /* Sidebar for Questions */
 .sidebar {
     width: 30%;
-    background: #ff6f61;
+    background:;
     color: white;
     padding: 20px;
     overflow-y: auto;
@@ -230,6 +244,7 @@ body {
     height: 100vh;
     padding: 20px;
     position: relative;
+    
 }
 
 /* Answer Box (Fully Visible) */
@@ -279,6 +294,7 @@ body {
     text-align: center;
     min-height: 50px; /* Ensures uniform height */
     box-sizing: border-box; /* Prevents padding issues */
+    background: linear-gradient(to right, black 1%,Red 80%);;
 }
 
 /* Prevent the first question from being larger */
@@ -289,6 +305,7 @@ body {
 /* Hover Effect */
 .question:hover {
     background: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(10deg, #140d0e, rgb(184, 4, 4));
 }
 
 
@@ -322,7 +339,7 @@ body {
 /* Ensure "The answer" is positioned HIGHER */
 .answer-title {
     font-size: 1.2rem; /* Make it slightly larger */
-    color: #ff6f61; /* Make it pop */
+    color: red; /* Make it pop */
     position: relative;
     top: -10px; /* Move it up */
     margin-bottom: 5px; /* Reduce space below */
@@ -540,24 +557,52 @@ body {
 /* Keep "The answer" at the top */
 .answer-title {
     font-size: 1.2rem;
-    color: #ff6f61;
+    color: red;
     text-align: center;
     width: 100%;
+    font-weight: bold;
+    font-size: 32px;
 }
 
 /* ✅ Perfectly center the actual answer */
 #answer-text {
     opacity: 0;
     transition: all 0.5s ease-in-out;
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
     width: 100%;
     max-width: 90%;
+    font-size: 16px;
+    color: white;
     flex-grow: 1; /* Allows the text to take equal space */
     display: flex;
     align-items: center; /* ✅ Centers text vertically */
     justify-content: center; /* ✅ Centers text horizontally */
+
+
+
+    
+        opacity: 1;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        max-width: 90%;
+        display: flex;
+        align-items: center; /* ✅ Ensures vertical centering */
+        justify-content: center; /* ✅ Ensures horizontal centering */
+        margin: 0 auto; /* ✅ Prevents left-side extra spacing */
+    
+    
 }
+.border {
+    width: 100%;
+    height: 50px; /* ✅ Ensures visibility */
+    background: transparent; /* ✅ Or any color */
+}
+
+
+
+
 
 
 
@@ -566,12 +611,12 @@ body {
 .answer-box {
     width: 70%;
     max-width: 600px;
-    background: white;
+    background: rgb(165, 163, 163);
     color: black;
     text-align: center;
     padding: 20px;
     min-height: 160px;
-    border-top: 3px solid #ff6f61;
+    border-top: 10px solid red;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -582,12 +627,34 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Ensures the answer is centered */
+   
+
+
+     width: 70%;
+    max-width: 600px;
+    background: rgb(165, 163, 163);
+    color: black;
+    text-align: center; 
+    padding: 20px;
+    min-height: 160px;
+    border-top: 10px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* ✅ Fix alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Ensure content is centered */
+    justify-content: center; /* ✅ Center vertically */
 }
 
 /* Style "The Answer" Title */
 .title-container {
-    font-size: 1.2rem;
-    color: #ff6f61;
+    font-size: 5rem;
+    color: red;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -598,6 +665,7 @@ body {
     text-align: center;
     padding-top: 10px;
     margin-bottom:30px;
+    background: gray;
 }
 
 
@@ -611,6 +679,7 @@ body {
     text-overflow: ellipsis; /* ✅ Prevents overflow issues */
     width: auto; /* ✅ Adjusts width dynamically */
     max-width: 90%; /* ✅ Prevents unnecessary wrapping */
+    
 }
 
 
@@ -625,4 +694,84 @@ body {
     width: auto; /* ✅ Adjust width dynamically */
     max-width: 100%; /* ✅ Ensures it doesn’t wrap unnecessarily */
     display: inline-block; /* ✅ Prevents it from taking full width */
+    padding:30px;
+    text-align: center; /* Ensures text is centered */
+    margin: 0 auto; 
+
+
+
+
+
+    
+
+}
+
+
+/* Initially, Mario is hidden */
+.hidden #mario {
+    display: none;
+}
+
+/* Show Mario and trigger animation when Start is clicked */
+.intro.start-animation #mario {
+    display: block;
+    animation: walk-in 2.5s ease-in-out forwards;
+}
+
+/* Mario Walking Animation */
+#mario {
+    position: absolute;
+    bottom: 50px; /* Position Mario under the Start button */
+    left: -100px; /* Start off-screen */
+    width: 80px; /* Adjust Mario size */
+    opacity: 0; /* Initially hidden */
+    animation: walk-in 2.5s ease-in-out forwards; /* Start animation */
+}
+
+/* Walking Animation */
+@keyframes walk-in {
+    0% {
+        left: -100px; /* Start off-screen */
+        opacity: 0;
+    }
+    20% {
+        opacity: 1; /* Fade in */
+    }
+    100% {
+        left: 50%; /* Move to center */
+        transform: translateX(-50%); /* Center Mario */
+        opacity: 1;
+    }
+}
+
+
+
+/* Thank You Button */
+.thank-you-container {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, black 1%,Red 80%);/
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+    user-select: none; /* Prevents text selection */
+}
+
+.thank-you-container:hover {
+    transform: scale(1.05);
+    background: linear-gradient(10deg, #140d0e, rgb(184, 4, 4));
+}
+
+
+/* Style for the Question Number */
+.question-number {
+    font-weight: bold;
+    color: yellow; /* Make the question number yellow */
+    font-size: 20px;
+    margin-right: 5px;
 }
