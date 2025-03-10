@@ -446,7 +446,9 @@ body {
     flex-direction: column;
     align-items: center; /* ✅ Ensure content is centered */
     justify-content: center; /* ✅ Center vertically */
+    padding-bottom: 40px;
 }
+
 
 /* Style "The Answer" Title */
 .title-container {
@@ -463,6 +465,7 @@ body {
     padding-top: 10px;
     margin-bottom:30px;
     background: gray;
+
 }
 
 
